@@ -98,9 +98,10 @@ docker-compose up -d
 from tradingagents import TradingAgentsGraph
 
 # 初始化交易分析框架
+# 注意：个人使用时 deepseek 性价比更高，可将 llm_provider 改为 "deepseek"
 ta = TradingAgentsGraph(
-    llm_provider="openai",
-    model="gpt-4o",
+    llm_provider="deepseek",
+    model="deepseek-chat",
     market="cn"  # 中国市场
 )
 
